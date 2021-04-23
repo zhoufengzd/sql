@@ -1,0 +1,3 @@
+-- ## string <--> base64
+-- select cast(from_base64(to_base64(cast('hello' as bytes))) as string);
+-- "aGVsbG8=" <=> "hello"

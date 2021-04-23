@@ -1,0 +1,14 @@
+-- ## json functions:
+-- select json_extract(json_text, '$.class.students[0]') as first_student
+--     from unnest([
+--               '{"class" : {"students" : [{"name" : "Jane"}]}}',
+--               '{"class" : {"students" : []}}',
+--               '{"class" : {"students" : [{"name" : "John"}, {"name": "Jamie"}]}}'
+--               ]) as json_text;
+-- +-----------------+
+-- |  first_student  |
+-- +-----------------+
+-- | {"name":"Jane"} |
+-- | NULL            |
+-- | {"name":"John"} |
+-- +-----------------+
